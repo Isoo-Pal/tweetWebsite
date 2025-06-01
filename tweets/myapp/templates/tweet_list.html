@@ -16,7 +16,7 @@ Home page
         <div class="card-body">
             <h5 class="card-title">{{tweet.user.username}}</h5>
             <p class="card-text">{{tweet.text}}</p>
-            <a href="{% url 'tweet_edit' %}" class="btn btn-primary ">Edit</a>
+            <a href="{% url 'tweet_edit' tweet_id%}" class="btn btn-primary ">Edit</a>
             <a href="{% url 'tweet_delete'%}" class="btn btn-danger">Delete</a>
         </div>
         </div>
