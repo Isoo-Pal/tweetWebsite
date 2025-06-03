@@ -9,10 +9,10 @@ Home page
 
 <a class="btn btn-primary mb-4" href="{% url 'tweet_create' %}">Create a tweet</a>
 
-<div class="container row gap-3">
+<div class="container row gap-3 mx-auto">
     {% for tweet in tweets %}
         <div class="card" style="width: 18rem;">
-        <img src="{{tweet.photo.url}}" class="card-img-top" alt="...">
+        <img src="{{tweet.photo.url}}" class="card-img-top" alt="..." width="300" height="300">
         <div class="card-body">
             <h5 class="card-title">{{tweet.user.username}}</h5>
             <p class="card-text">{{tweet.text}}</p>
@@ -21,6 +21,7 @@ Home page
             <a href="{% url 'tweet_delete' tweet.id%}" class="btn btn-danger">Delete</a>
             {% endif %}
         </div>
+        
         </div>
     {% endfor %}
 </div>
